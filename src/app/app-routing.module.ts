@@ -9,11 +9,6 @@ import { ServiceComponent } from './pages/service/service.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  {
-    path: '/home',
-    redirectTo: '',
-    pathMatch: 'full',
-  },
   { path: 'about', component: AboutComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
