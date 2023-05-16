@@ -1,1 +1,9 @@
-<p>home works!</p>
+<h2>Product List</h2>
+<ul>
+  <li *ngFor="let product of products">
+    <h3>{{ product.name }}</h3>
+    <p>{{ product.price }}</p>
+    <p>{{ product.desc }}</p>
+    <button (click)="viewDetail(product.id)">Xem chi tiết</button>
+  </li>
+</ul>
