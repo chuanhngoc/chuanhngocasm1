@@ -1,34 +1,39 @@
 <h2>Register</h2>
-<form (ngSubmit)="onSubmit()">
-  <div>
-    <label for="username">Username:</label>
+<form class="form form-register" (ngSubmit)="onSubmit()">
+  <div class="md-3">
+    <label for="username" class="form-label">Your Username:</label>
     <input
-      type="text"
+      type="username"
       id="username"
       name="username"
       [(ngModel)]="user.username"
       required
+      class="form-control"
+      aria-describedby="emailHelp"
     />
   </div>
-  <div>
-    <label for="email">Email:</label>
+  <div class="md-3">
+    <label for="email" class="" form-label>Email:</label>
     <input
       type="email"
       id="email"
       name="email"
       [(ngModel)]="user.email"
       required
+      class="form-control"
+      aria-describedby="emailHelp"
     />
   </div>
-  <div>
-    <label for="password">Password:</label>
+  <div class="md-3">
+    <label for="password" class="" form-label>Password:</label>
     <input
       type="password"
       id="password"
       name="password"
       [(ngModel)]="user.password"
       required
+      class="form-control"
     />
   </div>
-  <button type="submit">Register</button>
+  <button class="btn btn-primary" type="submit">Register</button>
 </form>
