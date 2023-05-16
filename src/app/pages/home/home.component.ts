@@ -29,10 +29,10 @@ export class HomeComponent implements OnInit {
   }
 
   navigateToDetail(productId: string) {
-    this.router.navigate(['/detail', productId]);
+    this.router.navigate(['/', productId]);
   }
 
   deleteProduct(productId: string) {
-    this.router.navigate(['/detail', productId]);
+    this.router.navigate(['/', productId]);
   }
 }

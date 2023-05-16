@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FormsModule } from '@angular/forms';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ProductDetailComponent } from './pages/product-detail/product-detail.co
     BrowserAnimationsModule,
     MatSlideToggleModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
