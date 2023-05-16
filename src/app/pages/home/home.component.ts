@@ -1,20 +1,38 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { products } from 'src/app/datas/datas';
 import { Router } from '@angular/router';
+import { ProductService } from 'src/app/product-service.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent {
-  products = products;
-  constructor(private router: Router) {}
+export class HomeComponent implements OnInit {
+  // products = products;
+  products: any[] | undefined;
+  constructor(private productService: ProductService, private router: Router) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getProducts();
+  }
 
-  viewDetail(productId: string) {
-    // Điều hướng đến trang chi tiết sản phẩm với productId
-    this.router.navigate(['/product', productId]);
+  getProducts() {
+    this.productService.getProducts().subscribe(
+      (response) => {
+        this.products = response;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
+
+  navigateToDetail(productId: string) {
+    this.router.navigate(['/detail', productId]);
+  }
+
+  deleteProduct(productId: string) {
+    this.router.navigate(['/detail', productId]);
   }
 }
