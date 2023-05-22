@@ -28,7 +28,10 @@
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "./src/tailwind.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.scss"
+              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "src/styles.scss",
+              "src/style.css"
             ],
             "scripts": ["./node_modules/bootstrap/dist/js/bootstrap.min.js"]
           },
