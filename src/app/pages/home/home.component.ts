@@ -35,4 +35,8 @@ export class HomeComponent implements OnInit {
   deleteProduct(productId: string) {
     this.router.navigate(['/', productId]);
   }
+
+  // createProduct(product: Product) {
+  //   this.router.navigate("/create",)
+  // }
 }

@@ -7,22 +7,27 @@ import { Product } from './common/product';
   providedIn: 'root',
 })
 export class ProductService {
-  private apiUrl = 'http://127.0.0.1:8088/api/products'; // Thay đổi URL tương ứng với server của bạn
+  // private apiUrl = 'http://127.0.0.1:8088/api/products';
+
+  private apiUrl = 'http://127.0.0.1:3000/products';
+
+  // Thay đổi URL tương ứng với server của bạn
 
   constructor(private http: HttpClient) {}
 
   getProducts(): Observable<Product[]> {
-    return this.http.get<any>(this.apiUrl).pipe(
-      map((response) =>
-        response.datas.map((data: any) => ({
-          id: data._id,
-          name: data.name,
-          price: data.price,
-          desc: data.description,
-        }))
-      ),
-      catchError(this.handleError)
-    );
+    return this.http.get<any>(this.apiUrl);
+    // return this.http.get<any>(this.apiUrl).pipe(
+    //   map((response) =>
+    //     response.datas.map((data: any) => ({
+    //       id: data._id,
+    //       name: data.name,
+    //       price: data.price,
+    //       desc: data.description,
+    //     }))
+    //   ),
+    //   catchError(this.handleError)
+    // );
   }
 
   private handleError(error: HttpErrorResponse): Observable<never> {
