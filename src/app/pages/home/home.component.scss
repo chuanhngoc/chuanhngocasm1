@@ -6,7 +6,8 @@
 
 *{
   font-family: 'Nunito', sans-serif;
-  margin:0; padding:0;
+  // margin:0;
+  padding:0;
   box-sizing: border-box;
   text-transform: capitalize;
   outline: none; border:none;
@@ -41,6 +42,9 @@ section{
   color:var(--orange);
   border-radius: .5rem;
   padding:.2rem 1rem;
+
+  margin-left: 0.25rem;
+  font-weight: bold;
 }
 
 .heading span.space{
@@ -549,8 +553,26 @@ header .search-bar-container label:hover{
   width:100%;
 }
 
-.brand-container{
-  text-align: center;
+.swiper-wrapper{
+  margin:auto;
+  width: fit-content;
+  align-items: center;
+  display: flex;
+  /* flex-wrap: nowrap; */
+  flex-direction: row;
+}
+
+.swiper-slide {
+  margin-left:1.5em;
+  margin-right:1.5em;
+}
+
+.swiper-container {
+   width:100%;
+}
+
+.swiper-slide{
+  width: fit-content;
 }
 
 .footer{
